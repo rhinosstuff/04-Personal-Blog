@@ -3,27 +3,16 @@ const blogTitle = document.querySelector('#blogTitle');
 const blogContent = document.querySelector('#blogContent');
 const submit = document.querySelector('#submit');
 const alertsDiv = document.querySelector('#alerts')
-const htmlFilePath = "../blog.html"
+const htmlFilePath = "./blog.html"
 
-let blogList = [];
-
-// checks to see if there was any previously stored user input
-function init() {
-    const storedBlogs = JSON.parse(localStorage.getItem('storedBlogs'));
-    if (storedBlogs !== null) {
-        blogList = storedBlogs;
-        console.log(blogList);
-    }
-}
-
-// displays alerts if no input was recieved
+// displays alerts if no userInput was entered
 function displayAlert(alert) {
     alertsDiv.textContent = alert;
 }
 
-// when user submits, checks that all fields have user input, stores it in local storage
-// adds user input to localStorage
-// then opens blog.html page to show the user input displayed
+// when user submits, checks that all fields have userInput, stores it in localStorage blogger
+// calls addBlogger() from logic.js to add new userInput to blogs array
+// opens blog.html, to show the userInput displayed
 submit.addEventListener('click', function(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -41,11 +30,11 @@ submit.addEventListener('click', function(event) {
             content: blogContent.value.trim()
         };
 
-        blogList.push(blogger);    
-
-        localStorage.setItem('storedBlogs', JSON.stringify(blogList));
+        localStorage.setItem('blogger', JSON.stringify(blogger));
+        addBlogger();    
         window.location.replace(htmlFilePath);
     }
 });
 
-init();
+// calls storedBlogs() from logic.js to initiallize any previous localStorage entries
+storedBlogs();

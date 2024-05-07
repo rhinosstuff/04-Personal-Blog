@@ -20,3 +20,22 @@ themeSwitcher.addEventListener('click', function () {
       localStorage.setItem(mode);
     }
 });
+
+
+let blogs = [];
+
+// checks to see if there was any previously storedBlogs from localStorage and adds to blogs array
+function storedBlogs() {
+    const storedBlogs = JSON.parse(localStorage.getItem('storedBlogs'));
+    
+    if (storedBlogs !== null) {
+        blogs = storedBlogs;
+    }
+}
+
+// gets userInput from localStorage blogger and adds it to blogs array
+function addBlogger() {
+    const blogger = JSON.parse(localStorage.getItem('blogger'));
+    blogs.push(blogger);
+    localStorage.setItem('storedBlogs', JSON.stringify(blogs));
+}

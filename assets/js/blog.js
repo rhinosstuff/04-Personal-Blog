@@ -1,6 +1,6 @@
 const main = document.querySelector('main');
 const backButton = document.querySelector('#backButton');
-const htmlFilePath = "../index.html";
+const htmlFilePath = "./index.html";
 
 // takes user back to index.html so they can input more
 backButton.addEventListener('click', function(event) {
