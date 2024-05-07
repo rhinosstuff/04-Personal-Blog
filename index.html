@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Blog</title>
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/form.css" />
+    </head>
+    <body>
+        <div class="container light">
+            <header>
+                <h1>Personal Blog</h1>
+                <nav>
+                    <button id="themeSwitcher"><img id="dayNightImg" src="/assets/images/day-mode.png"></button>
+                </nav>
+            </header>
+            <main>
+                <section class="imgContainer">
+                    <h2>My First Blog...</h2>
+                    <img id="mainImg" src="./assets/images/pug.jpg" />
+                </section>
+                <section class="formContainer">
+                    <h2>What's on your mind?</h2>
+                    <form >
+                        <label for="userName">User Name</label>
+                        <input id="userName" name="userName" type="text" placeholder="name" autocomplete="on"/>
+                        <label for="blogTitle">Blog Title</label>
+                        <input id="blogTitle" name="blofTitle" type="text" placeholder="title" autocomplete="on"/>
+                        <label for="blogContent">Blog Content</label>
+                        <textarea id="blogContent" name="blogContent" cols="30" rows="10" placeholder="content" autocomplete="on"></textarea>
+                        <div id="alerts"></div>
+                        <button id="submit">Submit</button>
+                    </form>
+                </section>
+            </main>
+    </div>
+        <script src="./assets/js/logic.js"></script>
+        <script src="./assets/js/form.js"></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+#backButton {
+    margin-right: 40px;
+}
+
+.blogContainer {
+    position: relative;
+    border: solid;
+    margin: 20px;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.blogTitle {
+    border-bottom: solid;
+    padding-bottom: 5px;
+}
+
+.blogContent {
+    margin-bottom: 20px;
+    padding: 10px 25px 10px 25px;
+    font-style: italic;
+}
+
+.author {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    border-top: double 8px;
+    padding: 20px;
+}
+
+footer p {
+    margin-right: 10px;
+}
+
+#portfolioLink {
+    padding: 5px;
+}
+
+#portfolioLink > a {
+    text-decoration: none;
+    color: inherit;
+}
