@@ -1,0 +1,63 @@
+.light {
+    background-color:white;
+    color: black;
+}
+
+.dark {
+    background-color:#2e4766;
+    color: #e3e5ec;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: double 8px;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+}
+
+h1 {
+    margin-left: 20px;
+    font-size: xx-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#themeSwitcher {
+    padding: 5px;
+    height: 35px;
+}
+
+#dayNightImg {
+    width: 20px;
+}
+
+#dayNightImg:hover {
+    cursor: pointer;
+}
+
+button {
+    color: white;
+    background-color: slategray;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px darkslategray;
+    white-space: nowrap;
+    padding: 10px;       
+}
+
+button:hover {
+    background-color: black;
+}
+
+.dark button {
+    color: black;
+    background-color: #e3e5ec;
+    box-shadow: 0 2px 4px #e3e5ec;
+}
+
+.dark button:hover {
+    background-color: white;
+}
