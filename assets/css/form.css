@@ -19,7 +19,6 @@ main {
 
 #mainImg {
     width: 100%;
-    height: max-content;
     border-radius: 50%;
     padding: 25px;
 }

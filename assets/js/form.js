@@ -31,10 +31,11 @@ submit.addEventListener('click', function(event) {
         };
 
         localStorage.setItem('blogger', JSON.stringify(blogger));
-        addBlogger();    
+        addBlogger();   
         window.location.replace(htmlFilePath);
     }
 });
 
 // calls storedBlogs() from logic.js to initiallize any previous localStorage entries
 storedBlogs();
+containerMode();

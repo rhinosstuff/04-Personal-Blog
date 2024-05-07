@@ -1,23 +1,48 @@
-const container = document.querySelector('.container');
-const themeSwitcher = document.querySelector('#themeSwitcher')
-const dayNightImg = document.querySelector('#dayNightImg')
+const themeContainer = document.querySelector('.themeContainer');
+const themeButton = document.querySelector('#themeButton')
+const themeImg = document.querySelector('#themeImg')
 
-// changes .container class between light and dark
-// changes #dayNightImg src depending on light dark
-localStorage.setItem('mode', 'light');
-let mode = localStorage.getItem('mode');
+// changes .themeContainer class between light and dark
+// changes #themeImg src depending on light dark
 
-themeSwitcher.addEventListener('click', function () {
-    if (mode === 'light') {
-      mode = 'dark';
-      container.setAttribute('class', 'dark');
-      dayNightImg.setAttribute('src', 'assets/images/night-mode.png');
-      localStorage.setItem(mode);
+function lightMode() {
+    themeContainer.setAttribute('class', 'light');
+    themeImg.setAttribute('src', 'assets/images/day-mode.png');
+}
+
+function darkMode() {
+    themeContainer.setAttribute('class', 'dark');
+    themeImg.setAttribute('src', 'assets/images/night-mode.png');
+}
+
+function containerMode() {
+    let mode = 'light';
+    let storedMode = localStorage.getItem('storedMode');
+    
+    if (storedMode !== null) {
+        mode = storedMode;
     } else {
-      mode = 'light';
-      container.setAttribute('class', 'light');
-      dayNightImg.setAttribute('src', 'assets/images/day-mode.png');
-      localStorage.setItem(mode);
+        localStorage.setItem('storedMode', mode)
+    }
+
+    if (mode === 'light') {
+        lightMode();
+    } else if (mode === 'dark') {
+        darkMode();
+    }
+}
+
+themeButton.addEventListener('click', function () {
+    let mode = localStorage.getItem('storedMode');
+
+    if (mode === 'light') {
+        mode = 'dark';
+        darkMode();
+        localStorage.setItem('storedMode', mode);
+    } else {
+        mode = 'light';
+        lightMode();
+        localStorage.setItem('storedMode', mode);
     }
 });
 
