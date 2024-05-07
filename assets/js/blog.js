@@ -12,26 +12,29 @@ backButton.addEventListener('click', function(event) {
 // creates html elements inside of main for every user in blogList
 const blogList = JSON.parse(localStorage.getItem('storedBlogs'));
 
-for (let i = 0; i < blogList.length; i++) {
-    const blog = blogList[i];
+if (blogList !== null) {
+    for (let i = 0; i < blogList.length; i++) {
+        const blog = blogList[i];
 
-    const section = document.createElement('section');
-    section.className = 'blogContainer';
-    main.appendChild(section);
+        const section = document.createElement('section');
+        section.className = 'blogContainer';
+        main.appendChild(section);
 
-    const title = document.createElement('h2');
-    title.className = 'blogTitle';
-    title.textContent = blog.title;
-    section.appendChild(title);
+        const title = document.createElement('h2');
+        title.className = 'blogTitle';
+        title.textContent = blog.title;
+        section.appendChild(title);
 
-    const content = document.createElement('p');
-    content.className = 'blogContent';
-    content.textContent = blog.content;
-    section.appendChild(content);
+        const content = document.createElement('p');
+        content.className = 'blogContent';
+        content.textContent = blog.content;
+        section.appendChild(content);
 
-    const author = document.createElement('p');
-    author.className = 'author';
-    author.textContent = `Posted by: ${blog.author}`;
-    section.appendChild(author); 
-}
+        const author = document.createElement('p');
+        author.className = 'author';
+        author.textContent = `Posted by: ${blog.author}`;
+        section.appendChild(author); 
+    };
+};
 
+containerMode();
