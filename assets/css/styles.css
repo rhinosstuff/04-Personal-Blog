@@ -1,7 +1,6 @@
-#themeContainer {
-height: 100%;
-}
+/* This css applies to both the form & blog html pages */
 
+/* light & dark color themes */
 .light {
     background-color: white;
     color: black;
@@ -12,39 +11,39 @@ height: 100%;
     color: #e3e5ec;
 }
 
+/* header and nav settings */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: double 8px;
+    min-height: 80px;
     padding: 10px;
 }
 
 nav {
     display: flex;
+    align-items: center;
 }
 
-h1 {
+header h1 {
     margin-left: 20px;
     font-size: xx-large;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* theme button */
 #themeButton {
     padding: 5px;
-    height: 35px;
 }
 
-#themeImg {
+#themeButtonImg {
     width: 20px;
 }
 
-#themeImg:hover {
-    cursor: pointer;
-}
-
-button {
-    color: white;
+/* all buttons light */
+.light button {
+    color: #e3e5ec;
     background-color: slategray;
     border-radius: 10px;
     box-shadow: 0 2px 4px darkslategray;
@@ -52,16 +51,22 @@ button {
     padding: 10px;       
 }
 
-button:hover {
+.light button:hover {
     background-color: black;
+    cursor: pointer;
 }
 
+/* all buttons dark */
 .dark button {
     color: black;
     background-color: #e3e5ec;
+    border-radius: 10px;
     box-shadow: 0 2px 4px #e3e5ec;
+    white-space: nowrap;
+    padding: 10px;  
 }
 
 .dark button:hover {
     background-color: white;
+    cursor: pointer;
 }

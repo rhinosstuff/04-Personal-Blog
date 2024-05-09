@@ -2,28 +2,8 @@ main {
     display: flex;
 }
 
-.imgContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    width: 50%;
-}
-
-.imgContainer h2 {
-    font-size: xx-large;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    white-space: nowrap;
-    margin-top: 25px;
-}
-
-#mainImg {
-    width: 100%;
-    border-radius: 50%;
-    padding: 25px;
-}
-
-.formContainer {
+/* mainImg and form containers */
+.containers {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,32 +12,44 @@ main {
     padding: 25px;
 }
 
-.formContainer h2 {
-    font-size: x-large;
-    margin-bottom: 25px;
+/* text above mainImg */
+.imgH2 {
+    font-size: xx-large;
+    font-family: 'Lucida Handwriting', cursive, Verdana;
+    font-style: italic;
+}
+
+#mainImg {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 50%;
+    margin: 25px;
 }
 
 form {
     display: flex;
     flex-direction: column; 
     width: 100%;
+    max-width: 800px;
+    margin: 25px;
 }
 
 label {
-    padding: 12px 0 5px 0;
+    padding: 12px 5px 5px 5px;
 }
 
 input {
     padding: 5px;
 }
 
+/* textarea can be stretched verticaly only */
 textarea {
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+    resize: vertical;
+    min-width: none;
     padding: 5px;
 }
 
+/* alerts that pop up when no input was entered */
 #alerts {
     min-height: 30px;
     padding-top: 10px;
@@ -66,23 +58,22 @@ textarea {
     font-size: large;
 }
 
+/* submit button on form */
 #submit {
     align-self: center;
     margin-top: 10px;
     width: 200px;
 }
 
-@media screen and (max-width: 650px) {
+/* changes to stacked containets an 100% width */
+@media screen and (max-width: 800px) {
     main {
         flex-direction: column;
-    }
-
-    .imgContainer {
+        align-items: center;
         width: 100%;
     }
 
-    .formContainer {
-        width: 100%;
-    }
-    
+    .containers {
+        width: inherit;
+    }  
 }

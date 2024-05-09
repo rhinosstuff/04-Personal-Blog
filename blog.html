@@ -8,26 +8,34 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
         <link rel="stylesheet" href="./assets/css/blog.css" />
     </head>
-    <body>
-        <div id="themeContainer "class="themeContainer light">
-            <header>
-                <h1>My First Blog... Posted</h1>
-                <nav>
-                    <button id="backButton">&#11160; Back</button>
-                    <button id="themeButton"><img id="themeImg" src="/assets/images/day-mode.png"></button>
-                </nav>
-            </header>
-            <main>
-                <!-- Filled in with javascript from blog.js -->
-            </main>
-            <footer>
-                <p>Made by: Ryan Osguthorpe ---
-                    <button id="portfolioLink">
-                        <a href="https://rhinosstuff.github.io/02-Advanced-CSS/">My Portfolio</a>
-                    </button>
-                </p> 
-            </footer>
-        </div>
+    <!-- class light can be switched to dark by user -->
+    <body class="themeCSS light">
+        <header>
+            <h1>My First Blog... Posted</h1>
+            <nav>
+                <!-- backButton takes you back to teh form page -->
+                <button id="backButton">&#11160; Back</button>
+                <!-- themeButton toggles light and dark theme, src is changed as well -->
+                <button id="themeButton"><img id="themeButtonImg" src="/assets/images/day-mode.png"></button>
+            </nav>
+        </header>
+        <main>
+            <!-- Filled in with javascript from blog.js -->
+            <!-- section class = 'blogContainer'-->
+                <!-- h2 class = 'blogTitle'-->
+                <!-- p class = 'blogContent' -->
+                <!-- p class = 'blogAuthor' -->
+            
+            <!-- This is not displayed, place holder for theme switching -->
+            <img id="mainImg" src="./assets/images/pug.jpg" /> 
+        </main>
+        <footer>
+            <p>Made by: Ryan Osguthorpe ---
+                <button id="portfolioLink">
+                    <a href="https://rhinosstuff.github.io/My-Portfolio/">My Portfolio</a>
+                </button>
+            </p> 
+        </footer>
         <script src="./assets/js/logic.js"></script>
         <script src="./assets/js/blog.js"></script>
     </body>
