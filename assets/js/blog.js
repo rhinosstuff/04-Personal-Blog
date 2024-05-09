@@ -7,9 +7,9 @@ backButton.addEventListener('click', function(event) {
     event.preventDefault();
     event.stopPropagation();
     window.location.replace(htmlFilePath);
-});
+})
 
-// creates html elements inside of main for every user in blogList
+// creates html elements in blog.html, inside of main, for every object in storedBlogs from localStorage
 const blogList = JSON.parse(localStorage.getItem('storedBlogs'));
 
 if (blogList !== null) {
@@ -31,10 +31,11 @@ if (blogList !== null) {
         section.appendChild(content);
 
         const author = document.createElement('p');
-        author.className = 'author';
+        author.className = 'blogAuthor';
         author.textContent = `Posted by: ${blog.author}`;
         section.appendChild(author); 
-    };
-};
+    }
+}
 
-containerMode();
+// calls themeMode() from logic.js to initiallize light or dark theme stored in localStorage
+themeMode();

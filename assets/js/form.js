@@ -2,8 +2,8 @@ const userName = document.querySelector('#userName');
 const blogTitle = document.querySelector('#blogTitle');
 const blogContent = document.querySelector('#blogContent');
 const submit = document.querySelector('#submit');
-const alertsDiv = document.querySelector('#alerts')
-const htmlFilePath = "./blog.html"
+const alertsDiv = document.querySelector('#alerts');
+const htmlFilePath = "./blog.html";
 
 // displays alerts if no userInput was entered
 function displayAlert(alert) {
@@ -28,14 +28,15 @@ submit.addEventListener('click', function(event) {
             author: userName.value.trim(),
             title: blogTitle.value.trim(),
             content: blogContent.value.trim()
-        };
+        }
 
         localStorage.setItem('blogger', JSON.stringify(blogger));
         addBlogger();   
         window.location.replace(htmlFilePath);
     }
-});
+})
 
 // calls storedBlogs() from logic.js to initiallize any previous localStorage entries
 storedBlogs();
-containerMode();
+// calls themeMode() from logic.js to initiallize light or dark theme stored in localStorage
+themeMode();

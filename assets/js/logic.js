@@ -1,21 +1,28 @@
-const themeContainer = document.querySelector('.themeContainer');
-const themeButton = document.querySelector('#themeButton')
-const themeImg = document.querySelector('#themeImg')
+const themeCSS = document.querySelector('.themeCSS');
+const themeButton = document.querySelector('#themeButton');
+const themeButtonImg = document.querySelector('#themeButtonImg');
+const mainImg = document.querySelector('#mainImg');
 
-// changes .themeContainer class between light and dark
-// changes #themeImg src depending on light dark
-
+// changes .themeCSS class between light and dark
+// changes #themeButtonImg src depending on light dark
+// changes #mainImg src depending on light dark
 function lightMode() {
-    themeContainer.setAttribute('class', 'light');
-    themeImg.setAttribute('src', 'assets/images/day-mode.png');
+    themeCSS.setAttribute('class', 'light');
+    themeButtonImg.setAttribute('src', 'assets/images/day-mode.png');
+    mainImg.setAttribute('src', 'assets/images/pug.jpg');
 }
 
 function darkMode() {
-    themeContainer.setAttribute('class', 'dark');
-    themeImg.setAttribute('src', 'assets/images/night-mode.png');
+    themeCSS.setAttribute('class', 'dark');
+    themeButtonImg.setAttribute('src', 'assets/images/night-mode.png');
+    mainImg.setAttribute('src', 'assets/images/owl.jpg');
 }
 
-function containerMode() {
+// themeMode() initializes and keeps track of 'light' or 'dark' modes in localStorage
+// it first checks to see if there was a previously storedMode from localStorage
+// if true, calls lightMode() or darkMode() based on storedMode value 'light' or 'dark'
+// if false, sets storedMode to 'light' in localStorage, then calls lightMode() to initialize
+function themeMode() {
     let mode = 'light';
     let storedMode = localStorage.getItem('storedMode');
     
@@ -32,6 +39,9 @@ function containerMode() {
     }
 }
 
+// themeButton when clicked gets storedMode from localStorage 
+// checks for 'light' or 'dark' value then switches to the oppisite mode
+// then stores the new mode in localStorage
 themeButton.addEventListener('click', function () {
     let mode = localStorage.getItem('storedMode');
 
@@ -44,12 +54,11 @@ themeButton.addEventListener('click', function () {
         lightMode();
         localStorage.setItem('storedMode', mode);
     }
-});
-
-
-let blogs = [];
+})
 
 // checks to see if there was any previously storedBlogs from localStorage and adds to blogs array
+let blogs = [];
+
 function storedBlogs() {
     const storedBlogs = JSON.parse(localStorage.getItem('storedBlogs'));
     
@@ -58,7 +67,7 @@ function storedBlogs() {
     }
 }
 
-// gets userInput from localStorage blogger and adds it to blogs array
+// gets userInput from blogger in localStorage and adds it to blogs array
 function addBlogger() {
     const blogger = JSON.parse(localStorage.getItem('blogger'));
     blogs.push(blogger);

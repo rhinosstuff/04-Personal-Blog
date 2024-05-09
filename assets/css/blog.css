@@ -1,7 +1,14 @@
+/* back button spacing from theme button */
 #backButton {
     margin-right: 40px;
 }
 
+/* place holder for mainImg light and dark */
+#mainImg {
+    display: none;
+}
+
+/* these elements are all created in blog.js */
 .blogContainer {
     position: relative;
     border: solid;
@@ -21,12 +28,13 @@
     font-style: italic;
 }
 
-.author {
+.blogAuthor {
     position: absolute;
     bottom: 0;
     padding: 5px;
 }
 
+/* styles link to my portfolio */
 footer {
     display: flex;
     justify-content: center;

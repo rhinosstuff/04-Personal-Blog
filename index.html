@@ -8,34 +8,36 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
         <link rel="stylesheet" href="./assets/css/form.css" />
     </head>
-    <body>
-        <div id="themeContainer "class="themeContainer light">
-            <header>
-                <h1>Personal Blog</h1>
-                <nav>
-                    <button id="themeButton"><img id="themeImg" src="/assets/images/day-mode.png"></button>
-                </nav>
-            </header>
-            <main>
-                <section class="imgContainer">
-                    <h2>My First Blog...</h2>
-                    <img id="mainImg" src="./assets/images/pug.jpg" />
-                </section>
-                <section class="formContainer">
-                    <h2>What's on your mind?</h2>
-                    <form >
-                        <label for="userName">User Name</label>
-                        <input id="userName" name="userName" type="text" placeholder="name" autocomplete="on"/>
-                        <label for="blogTitle">Blog Title</label>
-                        <input id="blogTitle" name="blofTitle" type="text" placeholder="title" autocomplete="on"/>
-                        <label for="blogContent">Blog Content</label>
-                        <textarea id="blogContent" name="blogContent" cols="30" rows="10" placeholder="content" autocomplete="on"></textarea>
-                        <div id="alerts"></div>
-                        <button id="submit">Submit</button>
-                    </form>
-                </section>
-            </main>
-        </div>
+    <!-- class light can be switched to dark by user -->
+    <body class="themeCSS light">
+        <header>
+            <h1>Personal Blog</h1>
+            <nav>
+                <!-- themeButton toggles light and dark theme, src is changed as well -->
+                <button id="themeButton"><img id="themeButtonImg" src="/assets/images/day-mode.png"></button>
+            </nav>
+        </header>
+        <main>
+            <!-- holds the mainImg, src is changed by light and dark theme button -->
+            <section class="containers">
+                <h2 class="imgH2">My First Blog...</h2>
+                <img id="mainImg" src="./assets/images/pug.jpg" />
+            </section>
+            <!-- form content -->
+            <section class="containers">
+                <h3>What's on your mind?</h3>
+                <form >
+                    <label for="userName">User Name</label>
+                    <input id="userName" name="userName" type="text" placeholder="name" autocomplete="on"/>
+                    <label for="blogTitle">Blog Title</label>
+                    <input id="blogTitle" name="blofTitle" type="text" placeholder="title" autocomplete="on"/>
+                    <label for="blogContent">Blog Content</label>
+                    <textarea id="blogContent" name="blogContent" cols="30" rows="10" placeholder="content" autocomplete="on"></textarea>
+                    <div id="alerts"></div>
+                    <button id="submit">Submit</button>
+                </form>
+            </section>
+        </main>
         <script src="./assets/js/logic.js"></script>
         <script src="./assets/js/form.js"></script>
     </body>
