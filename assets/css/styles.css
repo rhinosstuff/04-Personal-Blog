@@ -1,14 +1,28 @@
 /* This css applies to both the form & blog html pages */
+:root {
+    /* light color theme */
+    --l-bg: white;
+    --l-font: black;
+    --l-btn-bg: slategray;
+    --l-btn-bgH: #2e4766; 
+    --l-btn-font: white;
+    /* dark color theme */
+    --d-bg: #2e4766;
+    --d-font: white;
+    --d-btn-bg: #e3e5ec;
+    --d-btn-bgH: white; 
+    --d-btn-font: #2e4766;
+}
 
 /* light & dark color themes */
 .light {
-    background-color: white;
-    color: black;
+    background-color: var(--l-bg);
+    color: var(--l-font);
 }
 
 .dark {
-    background-color:#2e4766;
-    color: #e3e5ec;
+    background-color:var(--d-bg);
+    color: var(--d-font);
 }
 
 /* header and nav settings */
@@ -43,19 +57,19 @@ header h1 {
 
 /* all buttons light & dark mode*/
 .light button {
-    color: #e3e5ec;
-    background-color: slategray;
+    color: var(--l-btn-font);
+    background-color: var(--l-btn-bg);
     border-radius: 10px;
-    box-shadow: 0 2px 4px darkslategray;
+    box-shadow: 0 2px 4px var(--l-btn-bg);
     white-space: nowrap;
     padding: 10px;       
 }
 
 .dark button {
-    color: black;
-    background-color: #e3e5ec;
+    color: var(--d-btn-font);
+    background-color: var(--d-btn-bg);
     border-radius: 10px;
-    box-shadow: 0 2px 4px #e3e5ec;
+    box-shadow: 0 2px 4px var(--d-btn-bg);
     white-space: nowrap;
     padding: 10px;  
 }
@@ -64,12 +78,12 @@ header h1 {
 /* only allows hover function on hover devices */
 @media (hover: hover) {
     .light button:hover {
-        background-color: black;
+        background-color: var(--l-btn-bgH);
         cursor: pointer;
     }
 
     .dark button:hover {
-        background-color: white;
+        background-color: var(--d-btn-bgH);
         cursor: pointer;
     }
 }
