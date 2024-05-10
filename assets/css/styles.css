@@ -41,7 +41,7 @@ header h1 {
     width: 20px;
 }
 
-/* all buttons light */
+/* all buttons light & dark mode*/
 .light button {
     color: #e3e5ec;
     background-color: slategray;
@@ -51,12 +51,6 @@ header h1 {
     padding: 10px;       
 }
 
-.light button:hover {
-    background-color: black;
-    cursor: pointer;
-}
-
-/* all buttons dark */
 .dark button {
     color: black;
     background-color: #e3e5ec;
@@ -66,7 +60,16 @@ header h1 {
     padding: 10px;  
 }
 
-.dark button:hover {
-    background-color: white;
-    cursor: pointer;
+
+/* only allows hover function on hover devices */
+@media (hover: hover) {
+    .light button:hover {
+        background-color: black;
+        cursor: pointer;
+    }
+
+    .dark button:hover {
+        background-color: white;
+        cursor: pointer;
+    }
 }

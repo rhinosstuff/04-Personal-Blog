@@ -49,7 +49,7 @@ textarea {
     padding: 5px;
 }
 
-/* alerts that pop up when no input was entered */
+/* alerts that display when no input was entered */
 #alerts {
     min-height: 30px;
     padding-top: 10px;

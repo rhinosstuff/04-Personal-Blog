@@ -28,22 +28,27 @@ Blog Page:
 
 
 <a href="https://rhinosstuff.github.io/Personal-Blog/">
-This is a link to my published webpage.></a>
+This is a link to my published webpage.</a>
+
+This is what my final webpage looks like in light and dark mode.
+
+<img src="assets/images/form-light.png" width="200">
+<img src="assets/images/blog-light.png" width="200">
+
+<img src="assets/images/form-dark.png" width="200">
+<img src="assets/images/blog-dark.png" width="200">
 
 ## Image Sources
 
+<img src="assets/images/pug.jpg" width="200">
 Image by <a href="https://pixabay.com/users/helpinghounds-29985356/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8632718">Amit Fulwariya</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8632718">Pixabay</a>
 
-![alt text](assets/images/pug.jpg)
-
+<img src="assets/images/owl.jpg" width="200">
 Image by <a href="https://pixabay.com/users/moonzigg-6341937/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3184032">Gerry</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3184032">Pixabay</a>
 
-![alt text](assets/images/owl.jpg)
+<img src="assets/images/day-mode.png" width="200">
+Image by <a href="https://www.flaticon.com/free-icons/mode" title="mode icons">Mode icons created by amoghdesign - Flaticon</a>
 
-<a href="https://www.flaticon.com/free-icons/mode" title="mode icons">Mode icons created by amoghdesign - Flaticon</a>
+<img src="assets/images/night-mode.png" width="200">
+Image by <a href="https://www.flaticon.com/free-icons/dark-mode" title="dark mode icons">Dark mode icons created by Wahyu.Setyanto - Flaticon</a>
 
-![alt text](assets/images/day-mode.png)
-
-<a href="https://www.flaticon.com/free-icons/dark-mode" title="dark mode icons">Dark mode icons created by Wahyu.Setyanto - Flaticon</a>
-
-![alt text](assets/images/night-mode.png)

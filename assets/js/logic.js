@@ -5,17 +5,19 @@ const mainImg = document.querySelector('#mainImg');
 
 // changes .themeCSS class between light and dark
 // changes #themeButtonImg src depending on light dark
-// changes #mainImg src depending on light dark
+// changes #mainImg src & alt depending on light dark
 function lightMode() {
     themeCSS.setAttribute('class', 'light');
     themeButtonImg.setAttribute('src', 'assets/images/day-mode.png');
     mainImg.setAttribute('src', 'assets/images/pug.jpg');
+    mainImg.setAttribute('alt', 'pug wearing pink bowtie and sunglasses');
 }
 
 function darkMode() {
     themeCSS.setAttribute('class', 'dark');
     themeButtonImg.setAttribute('src', 'assets/images/night-mode.png');
     mainImg.setAttribute('src', 'assets/images/owl.jpg');
+    mainImg.setAttribute('alt', 'snowy owl in winter');
 }
 
 // themeMode() initializes and keeps track of 'light' or 'dark' modes in localStorage
